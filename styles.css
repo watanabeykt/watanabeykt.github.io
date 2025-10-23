@@ -1,0 +1,250 @@
+:root {
+  --bg: #ffffff;
+  --surface: #f7f9fc;
+  --text: #1f2933;
+  --muted: #6b7280;
+  --accent: #1d4ed8;
+  --border: #e5e7eb;
+  font-size: 15px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--accent);
+}
+
+.container {
+  width: min(860px, 92%);
+  margin: 0 auto;
+}
+
+.section {
+  padding: 2.4rem 0;
+}
+
+.surface {
+  background: var(--surface);
+}
+
+.section + .section {
+  border-top: 1px solid var(--border);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.6rem 0;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.section-header {
+  margin-bottom: 2rem;
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: clamp(1.6rem, 2.6vw, 1.9rem);
+}
+
+h4 {
+  margin: 0;
+  font-size: clamp(1.1rem, 2.4vw, 1.3rem);
+}
+
+.section-header p {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+}
+
+.intro {
+  padding-top: 3.2rem;
+}
+
+.intro-inner {
+  display: grid;
+  gap: 2rem;
+}
+
+.intro-name {
+  margin: 0;
+  font-size: clamp(2.05rem, 3.2vw, 2.45rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.intro-role {
+  margin: 0.3rem 0 0;
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.intro-summary {
+  display: grid;
+  gap: 1.1rem;
+  font-size: 0.95rem;
+}
+
+.intro-summary p {
+  margin: 0;
+}
+
+.contact-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.contact-list div {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.contact-list dt {
+  min-width: 7.5rem;
+  color: var(--muted);
+  font-weight: 500;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.contact-list dd {
+  margin: 0;
+}
+
+.column-title {
+  margin: 2rem 0 1rem;
+  font-size: 0.95rem;
+}
+
+.simple-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.simple-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem 1rem;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+}
+
+.list-term {
+  min-width: 5.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.list-desc {
+  flex: 1;
+  min-width: 12rem;
+  line-height: 1.5;
+}
+
+.publication-list {
+  gap: 0.55rem;
+}
+
+.project-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1.1rem;
+  font-size: 0.95rem;
+}
+
+.project-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.project-list p {
+  margin: 0.3rem 0 0.4rem;
+  line-height: 1.5;
+}
+
+.project-link {
+  font-weight: 500;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+.award-list {
+  gap: 0.9rem;
+}
+
+.site-footer {
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+}
+
+@media (max-width: 720px) {
+  .contact-list div {
+    flex-direction: column;
+  }
+
+  .simple-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
