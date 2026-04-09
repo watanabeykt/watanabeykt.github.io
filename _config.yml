@@ -1,2 +1,7 @@
 plugins:
   - jekyll-sitemap
+  
+title: "Yukito Watanabe"
+description: "Personal website of Yukito Watanabe, including biography, publications, projects, and awards."
+lang: ja
+url: "https://watanabeykt.github.io"
